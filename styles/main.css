@@ -6,15 +6,16 @@ body {
   margin: 0; }
 
 h1, h2, h3 {
-  font-weight: 400;
-  color: #32c4e9; }
+  color: #32c4e9;
+  font-weight: 400; }
 
 h1 {
   text-transform: uppercase;
-  font-size: 2rem; }
+  font-weight: 700;
+  font-size: 4rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 p {
   font-size: 1.5rem;
@@ -25,6 +26,9 @@ p {
   p.blue {
     color: #32c4e9; }
 
+.centered {
+  text-align: center; }
+
 a {
   text-decoration: none;
   color: #ffffff; }
@@ -32,7 +36,7 @@ a {
 li {
   color: #808285; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1020px) {
   body {
     font-size: 85%; } }
 
@@ -61,6 +65,22 @@ li {
      -moz-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
+  .graphic-text .feature-text {
+    min-width: 25em;
+    width: 30%; }
+    .graphic-text .feature-text p {
+      font-size: 1em; }
+  .graphic-text .feature-graphic {
+    margin-left: 2em;
+    min-width: 20em;
+    -webkit-box-flex: 3;
+       -moz-box-flex: 3;
+        -ms-flex: 3 0 auto;
+            flex: 3 0 auto;
+    width: 40%; }
+    .graphic-text .feature-graphic img {
+      max-height: 100%;
+      max-width: 100%; }
   .graphic-text.reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -68,20 +88,9 @@ li {
        -moz-box-direction: reverse;
         -ms-flex-flow: row-reverse wrap;
             flex-flow: row-reverse wrap; }
-  .graphic-text .feature-text {
-    -webkit-box-flex: 3;
-       -moz-box-flex: 3;
-        -ms-flex: 3 0 auto;
-            flex: 3 0 auto;
-    min-width: 20em;
-    width: 50%; }
-  .graphic-text .feature-graphic {
-    min-width: 20em;
-    max-width: 40%;
-    margin: 0 2em; }
-    .graphic-text .feature-graphic img {
-      max-height: 100%;
-      max-width: 100%; }
+    .graphic-text.reverse .feature-graphic {
+      margin-right: 2em;
+      margin-left: 0; }
 
 .demo-ribbon {
   text-transform: uppercase;
@@ -101,8 +110,8 @@ li {
       -ms-flex-align: center;
           align-items: center; }
   .demo-ribbon a {
-    -webkit-box-shadow: 0 0 55px #808285;
-            box-shadow: 0 0 55px #808285; }
+    -webkit-box-shadow: 0 0 25px #808285;
+            box-shadow: 0 0 25px #808285; }
 
 header {
   position: relative;
@@ -204,7 +213,7 @@ header {
       -moz-transition: opacity 200ms;
       transition: opacity 200ms; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1020px) {
   .nav-burger {
     display: block; }
   .buttons-container {
@@ -387,19 +396,36 @@ header {
       padding: 0.2em 0.6em; }
 
 .ribbon {
-  background-color: #ffffff;
   position: relative;
+  font-weight: 300;
   display: block;
   width: 100%; }
   .ribbon.dark {
     background-color: #111111; }
+  .ribbon.semidark {
+    background-color: #808285; }
+  .ribbon.dark h1, .ribbon.dark p, .ribbon.dark a, .ribbon.dark span, .ribbon.semidark h1, .ribbon.semidark p, .ribbon.semidark a, .ribbon.semidark span {
+    color: #ffffff; }
+  .ribbon .background-container {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+    .ribbon .background-container img {
+      opacity: 0.1;
+      min-height: 100%;
+      min-width: 100%; }
   .ribbon h1 {
     text-align: center;
     padding-bottom: 0.5em;
     padding-top: 1em; }
+    .ribbon h1.no-padding {
+      padding-bottom: 0;
+      margin-bottom: 0; }
   .ribbon .padded-container {
     position: relative;
-    max-width: 65rem;
     padding: 0 4em;
     margin: 0 auto; }
 
@@ -458,7 +484,9 @@ header {
     font-weight: 300;
     color: #32c4e9; }
     .banner-content .headline-container h1 {
+      padding-top: 2em;
       text-align: left;
+      font-weight: 400;
       font-size: 2em; }
     .banner-content .headline-container .subtitle {
       width: 80%; }
@@ -509,11 +537,23 @@ header {
         .banner-content .form-container .padded-input-container .submit-button:hover {
           background-color: rgba(50, 196, 233, 0.5); }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1020px) {
   .subtitle {
     width: 100%; }
   .padded-input-container {
     max-width: 100%; } }
+
+.ribbon.services .background-container {
+  left: -20%; }
+  .ribbon.services .background-container img {
+    opacity: 0.5;
+    min-height: none;
+    min-width: none;
+    max-height: 100%;
+    max-width: 100%; }
+
+.content-wrapper h1 {
+  margin: 0; }
 
 .article-selector {
   position: relative; }
@@ -535,24 +575,25 @@ header {
     padding: 0; }
     .article-selector ul li {
       text-transform: uppercase;
-      font-size: 0.9em;
       list-style: none;
       display: inline; }
       .article-selector ul li .selection-name {
-        -webkit-transition-property: background-color color;
-        -o-transition-property: background-color color;
-        -moz-transition-property: background-color color;
-        transition-property: background-color color;
-        -webkit-transition-duration: 500ms;
-           -moz-transition-duration: 500ms;
-             -o-transition-duration: 500ms;
-                transition-duration: 500ms;
-        background-color: #ffffff;
         padding: 0.5em 1.5em;
-        border-radius: 0.2em; }
-        .article-selector ul li .selection-name:hover {
-          background-color: #808285;
-          color: #ffffff; }
+        border-radius: 0.2em;
+        cursor: pointer; }
+        .article-selector ul li .selection-name span {
+          -webkit-transition-property: color;
+          -o-transition-property: color;
+          -moz-transition-property: color;
+          transition-property: color;
+          -webkit-transition-duration: 500ms;
+             -moz-transition-duration: 500ms;
+               -o-transition-duration: 500ms;
+                  transition-duration: 500ms; }
+        .article-selector ul li .selection-name:hover span {
+          color: #32c4e9; }
+        .article-selector ul li .selection-name.active span {
+          color: #32c4e9; }
 
 .article-container {
   position: relative;
@@ -570,11 +611,15 @@ header {
     .article-container .article.visible {
       display: block; }
 
-.clients-header {
+.brands-ribbon .padded-container {
+  max-width: 50em; }
+
+.brands-header {
+  text-align: center;
   padding-bottom: 0;
   margin-bottom: 0; }
 
-.client-brand-container {
+.brand-container {
   padding-bottom: 1em;
   position: relative;
   margin: 0 auto;
@@ -599,12 +644,37 @@ header {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
 
-.client-logo-container {
-  padding: 2em;
-  width: 7em; }
-  .client-logo-container img {
+.logo-container {
+  text-align: center;
+  padding: 2em; }
+  .logo-container:nth-child(odd) {
+    width: 14em; }
+  .logo-container:nth-child(even) {
+    width: 9em; }
+  .logo-container img {
     max-height: 100%;
     max-width: 100%; }
+
+.home-brands-container {
+  position: relative; }
+  .home-brands-container .brand-background-container {
+    background-image: url("/assets/swirl2_2.png");
+    background-position: center -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%; }
+
+.connect-data .bg {
+  background-image: url("/assets/grid.png");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5; }
 
 .contact .padded-container {
   padding-bottom: 1em; }
@@ -615,6 +685,7 @@ header {
 
 .outer-contact-container {
   position: relative;
+  margin-top: 1em;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -635,6 +706,10 @@ header {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .outer-contact-container .two-cards {
+    position: relative;
+    max-width: 80%;
+    width: 30em; }
 
 .contact-card {
   -webkit-box-shadow: 0 0 10px #808285;
@@ -643,21 +718,26 @@ header {
   position: relative;
   overflow: hidden;
   height: auto;
-  -webkit-box-flex: 1;
-     -moz-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
   padding: 2em 4em 4em 4em;
   border-radius: 0.5em;
-  margin: 2em auto;
-  max-width: 25em;
   z-index: 1; }
   .contact-card input, .contact-card textarea, .contact-card select {
     font-size: 1.1em; }
 
 .alternative-contact {
+  -webkit-transform: translateX(97%);
+     -moz-transform: translateX(97%);
+      -ms-transform: translateX(97%);
+       -o-transform: translateX(97%);
+          transform: translateX(97%);
+  border-radius: 0.5em;
+  position: absolute;
+  right: 0;
+  top: 3em;
   background-color: #111111;
-  padding: 1em 2em; }
+  padding: 1em; }
+  .alternative-contact p {
+    font-size: 1.1em; }
   .alternative-contact a:hover p {
     color: #32c4e9; }
   .alternative-contact .social-nav {
@@ -730,4 +810,82 @@ header {
     .submit-container input:focus {
       color: #32c4e9;
       outline: none; }
+
+.social-phone {
+  display: none; }
+
+@media only screen and (max-width: 1020px) {
+  .phone-container, .social-header {
+    display: none; }
+  .social-phone {
+    display: block; }
+  .alternative-contact ul, .alternative-contact li {
+    display: block;
+    padding: 0; }
+  .alternative-contact .social-nav {
+    padding: 0; }
+  .alternative-contact .social-logo {
+    margin: 1em 0; } }
+
+.ribbon h1.demo-header {
+  padding: 0; }
+
+.demo-content-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+  -webkit-box-pack: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.demo.contact-card {
+  max-width: 80%;
+  width: 20em; }
+
+.demo-message {
+  -webkit-transition: opacity 400ms;
+  -o-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+  width: 30em;
+  opacity: 1;
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+  .demo-message.hidden {
+    opacity: 0; }
+  .demo-message h1 {
+    padding: 0; }
+  .demo-message .left {
+    text-align: left; }
+  .demo-message .dark {
+    color: #111111; }
+  .demo-message .small {
+    font-size: 1.1em; }
+  .demo-message .caps {
+    text-transform: uppercase; }
+  .demo-message li {
+    font-weight: 300; }
+
+.product-banner {
+  text-align: center; }
+
+.ribbon.product .padded-container {
+  padding-bottom: 2em;
+  padding-top: 2em; }
 
