@@ -7,12 +7,12 @@ body {
 
 h1, h2, h3 {
   color: #32c4e9;
-  font-weight: 400; }
+  font-weight: 300; }
 
 h1 {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 4rem; }
+  font-size: 3rem; }
 
 h2 {
   font-size: 2rem; }
@@ -21,10 +21,12 @@ p {
   font-size: 1.5rem;
   font-weight: 300;
   color: #808285; }
-  p.white {
-    color: #ffffff; }
-  p.blue {
-    color: #32c4e9; }
+
+.blue {
+  color: #32c4e9; }
+
+.white {
+  color: #ffffff; }
 
 .centered {
   text-align: center; }
@@ -43,6 +45,53 @@ li {
 @media only screen and (max-width: 559px) {
   body {
     font-size: 75%; } }
+
+.quick-demo-form {
+  padding-bottom: 1em;
+  max-width: 24em; }
+  .quick-demo-form div {
+    position: relative;
+    padding: 0.5em 0;
+    margin: 0; }
+  .quick-demo-form .label-container {
+    color: #ffffff; }
+  .quick-demo-form .padded-input-container {
+    border-radius: 1em;
+    max-width: 90%; }
+    .quick-demo-form .padded-input-container .input-wrapper {
+      border-radius: 0.5em;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      left: 0;
+      top: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .quick-demo-form .padded-input-container input {
+      position: relative;
+      font-size: 0.7em;
+      font-weight: 300;
+      padding: 1em;
+      border: none;
+      outline: 0 !important; }
+    .quick-demo-form .padded-input-container .email-input {
+      -webkit-box-flex: 3;
+         -moz-box-flex: 3;
+          -ms-flex: 3 0 auto;
+              flex: 3 0 auto; }
+    .quick-demo-form .padded-input-container .submit-button {
+      -webkit-transition: background-color 500ms;
+      -o-transition: background-color 500ms;
+      -moz-transition: background-color 500ms;
+      transition: background-color 500ms;
+      background-color: #32c4e9;
+      cursor: pointer;
+      color: #ffffff;
+      width: 11em; }
+      .quick-demo-form .padded-input-container .submit-button:hover {
+        background-color: rgba(50, 196, 233, 0.5); }
 
 .graphic-text {
   height: 100%;
@@ -420,10 +469,13 @@ header {
   .ribbon h1 {
     text-align: center;
     padding-bottom: 0.5em;
-    padding-top: 1em; }
+    padding-top: 1em;
+    font-weight: 300; }
     .ribbon h1.no-padding {
       padding-bottom: 0;
-      margin-bottom: 0; }
+      padding-top: 0.5em;
+      margin-bottom: 0;
+      margin-top: 0; }
   .ribbon .padded-container {
     position: relative;
     padding: 0 4em;
@@ -490,52 +542,6 @@ header {
       font-size: 2em; }
     .banner-content .headline-container .subtitle {
       width: 80%; }
-  .banner-content .form-container {
-    padding-bottom: 1em;
-    max-width: 24em; }
-    .banner-content .form-container div {
-      position: relative;
-      padding: 0.5em 0;
-      margin: 0; }
-    .banner-content .form-container .label-container {
-      color: #ffffff; }
-    .banner-content .form-container .padded-input-container {
-      border-radius: 1em;
-      max-width: 90%; }
-      .banner-content .form-container .padded-input-container .input-wrapper {
-        border-radius: 0.5em;
-        position: relative;
-        overflow: hidden;
-        padding: 0;
-        left: 0;
-        top: 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: flex; }
-      .banner-content .form-container .padded-input-container input {
-        position: relative;
-        font-size: 0.7em;
-        font-weight: 300;
-        padding: 1em;
-        border: none;
-        outline: 0 !important; }
-      .banner-content .form-container .padded-input-container .email-input {
-        -webkit-box-flex: 3;
-           -moz-box-flex: 3;
-            -ms-flex: 3 0 auto;
-                flex: 3 0 auto; }
-      .banner-content .form-container .padded-input-container .submit-button {
-        -webkit-transition: background-color 500ms;
-        -o-transition: background-color 500ms;
-        -moz-transition: background-color 500ms;
-        transition: background-color 500ms;
-        background-color: #32c4e9;
-        cursor: pointer;
-        color: #ffffff;
-        width: 11em; }
-        .banner-content .form-container .padded-input-container .submit-button:hover {
-          background-color: rgba(50, 196, 233, 0.5); }
 
 @media only screen and (max-width: 1020px) {
   .subtitle {
@@ -667,20 +673,66 @@ header {
     height: 100%;
     width: 100%; }
 
-.connect-data .bg {
-  background-image: url("/assets/grid.png");
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0.5; }
+.how-it-works h1 {
+  margin-top: 0; }
 
-.contact .padded-container {
-  padding-bottom: 1em; }
+.how-it-works .flex-columns {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+     -moz-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .how-it-works .flex-columns .how-column {
+    padding: 1.3em;
+    width: 25%; }
+    .how-it-works .flex-columns .how-column .small {
+      font-weight: 300;
+      font-size: 1.1em; }
+
+.connect-data {
+  padding-bottom: 1.1em;
+  margin-bottom: -1em; }
+
+.how-connect-container {
+  background-color: #111111;
+  position: relative; }
+  .how-connect-container h1 {
+    color: #ffffff; }
+  .how-connect-container .network-bg {
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/TtcstKI/videoblocks-abstract-motion-background-digital-data-networks-loop_r-ghizhxz_thumbnail-full01.png");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5; }
+
+.contact {
+  background-image: url("/assets/nyc-skyline.svg");
+  background-position: center 0;
+  background-size: cover;
+  margin-bottom: -3px; }
+  .contact .padded-container {
+    padding-bottom: 1em; }
 
 .contact-header.contact-header {
-  padding-bottom: 0;
+  text-align: center;
+  padding-top: 0.5em;
   margin: 0; }
 
 .outer-contact-container {
@@ -827,8 +879,10 @@ header {
   .alternative-contact .social-logo {
     margin: 1em 0; } }
 
-.ribbon h1.demo-header {
-  padding: 0; }
+.ribbon.demo {
+  padding-bottom: 1em; }
+  .ribbon.demo h2 {
+    padding-bottom: 0.5em; }
 
 .demo-content-container {
   display: -webkit-box;
@@ -883,9 +937,94 @@ header {
     font-weight: 300; }
 
 .product-banner {
-  text-align: center; }
+  margin-bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: black; }
+  .product-banner .abs-opacity-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.3; }
+    .product-banner .abs-opacity-bg .abs-bg {
+      background-image: url("https://callscreen.us/wp-content/uploads/2018/08/banner-header-electric-energy-1557848.jpg");
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%; }
+  .product-banner .animated-banner {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+    .product-banner .animated-banner div {
+      height: 100%;
+      width: 100%; }
+    .product-banner .animated-banner .opacity {
+      -webkit-transition: opacity 3s;
+      -o-transition: opacity 3s;
+      -moz-transition: opacity 3s;
+      transition: opacity 3s;
+      opacity: 0.7; }
+    .product-banner .animated-banner .banner-image-container {
+      background-image: url("http://www.philwillburn.com/wp-content/uploads/2013/04/Figure-2-Network-of-who-the-executives-communicated-the-vision-to-Transparent-Background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      -webkit-transform: translateX(20%) translateY(0) scale(1) rotateZ(90deg);
+         -moz-transform: translateX(20%) translateY(0) scale(1) rotateZ(90deg);
+          -ms-transform: translateX(20%) translateY(0) scale(1) rotate(90deg);
+           -o-transform: translateX(20%) translateY(0) scale(1) rotateZ(90deg);
+              transform: translateX(20%) translateY(0) scale(1) rotateZ(90deg);
+      -webkit-transition: -webkit-transform 3s ease;
+      transition: -webkit-transform 3s ease;
+      -o-transition: -o-transform 3s ease;
+      -moz-transition: transform 3s ease, -moz-transform 3s ease;
+      transition: transform 3s ease;
+      transition: transform 3s ease, -webkit-transform 3s ease, -moz-transform 3s ease, -o-transform 3s ease; }
+    .product-banner .animated-banner.hiding .opacity {
+      opacity: 0; }
+    .product-banner .animated-banner.hiding .banner-image-container {
+      -webkit-transform: translateX(100%) translateY(20%) scale(0.25);
+         -moz-transform: translateX(100%) translateY(20%) scale(0.25);
+          -ms-transform: translateX(100%) translateY(20%) scale(0.25);
+           -o-transform: translateX(100%) translateY(20%) scale(0.25);
+              transform: translateX(100%) translateY(20%) scale(0.25); }
+  .product-banner .banner-container.banner-container {
+    padding-top: 6em;
+    text-align: left;
+    max-width: 45em;
+    margin: 0 auto; }
+    .product-banner .banner-container.banner-container h1, .product-banner .banner-container.banner-container h2 {
+      font-weight: 300;
+      text-align: left;
+      padding: 0;
+      margin: 0; }
+    .product-banner .banner-container.banner-container .quick-demo-form {
+      padding: 3em 0;
+      font-size: 1.5em;
+      text-align: left; }
+
+.ribbon.product .background-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+  .ribbon.product .background-container .helper {
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%; }
+  .ribbon.product .background-container img {
+    vertical-align: middle;
+    min-height: 0;
+    height: auto;
+    width: 100%; }
 
 .ribbon.product .padded-container {
-  padding-bottom: 2em;
-  padding-top: 2em; }
+  padding: 0 2em;
+  max-width: 65em; }
 
