@@ -617,6 +617,49 @@ header {
     .article-container .article.visible {
       display: block; }
 
+.solutions-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+  .solutions-container .solutions-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/03/20/1656e92cfb0535a.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.5; }
+  .solutions-container .card {
+    -webkit-box-shadow: 0 0 15px #808285;
+            box-shadow: 0 0 15px #808285;
+    border-radius: 1.5em;
+    position: relative;
+    overflow: hidden;
+    padding: 1em 2em;
+    margin: 2em 0; }
+    .solutions-container .card .card-bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: #ffffff;
+      opacity: 0.8; }
+    .solutions-container .card .top {
+      position: relative;
+      margin: auto; }
+      .solutions-container .card .top .feature-graphic {
+        -webkit-box-flex: 0;
+           -moz-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        width: 25%; }
+
 .brands-ribbon .padded-container {
   max-width: 50em; }
 
