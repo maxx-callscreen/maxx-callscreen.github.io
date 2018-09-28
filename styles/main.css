@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Gotham";
-  src: url("/assets/font/Gotham-Bold.ttf") format("truetype");
+  src: url("/assets/font/Gotham-Bold.ttf");
   font-weight: 700;
   font-style: 700; }
 
@@ -66,7 +66,8 @@ li {
 
 .quick-demo-form {
   padding-bottom: 1em;
-  max-width: 24em; }
+  max-width: 24em;
+  margin: 0 auto; }
   .quick-demo-form div {
     position: relative;
     padding: 0.5em 0;
@@ -146,7 +147,23 @@ li {
         -ms-flex: 3 0 auto;
             flex: 3 0 auto;
     max-width: 30em;
-    height: 25em; }
+    height: 25em;
+    text-align: center; }
+    .graphic-text .feature-graphic .button {
+      top: 50%; }
+      .graphic-text .feature-graphic .button a.bright {
+        -webkit-transition: -webkit-box-shadow 500ms ease;
+        transition: -webkit-box-shadow 500ms ease;
+        -o-transition: box-shadow 500ms ease;
+        -moz-transition: box-shadow 500ms ease;
+        transition: box-shadow 500ms ease;
+        transition: box-shadow 500ms ease, -webkit-box-shadow 500ms ease;
+        background-color: #32c4e9;
+        -webkit-box-shadow: 0 0 0 #ffffff;
+                box-shadow: 0 0 0 #ffffff; }
+        .graphic-text .feature-graphic .button a.bright:hover {
+          -webkit-box-shadow: 0 0 150px #ffffff;
+                  box-shadow: 0 0 150px #ffffff; }
     .graphic-text .feature-graphic img {
       max-height: 100%;
       max-width: 100%; }
@@ -431,11 +448,13 @@ header {
       font-size: 0.8rem;
       margin: 0; }
 
+.button-1 {
+  list-style: none;
+  float: left; }
+
 .button {
   position: relative;
-  list-style: none;
-  padding: 0 0.1em;
-  float: left; }
+  padding: 0 0.1em; }
   .button a {
     display: inline-block;
     position: relative;
@@ -552,21 +571,24 @@ header {
   font-size: 1.5em;
   padding: 1em 4em; }
   .banner-content .content-wrapper {
-    max-width: 35em;
-    width: 100%; }
+    max-width: 45em;
+    width: 100%;
+    margin: 0 auto; }
   .banner-content .headline-container {
     color: #32c4e9;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: center; }
     .banner-content .headline-container h1 {
       padding-bottom: 0;
       margin-bottom: 0;
       padding-top: 2em;
-      text-align: left;
       font-weight: 400;
-      font-size: 2.4em; }
+      font-size: 2.4em;
+      margin: 0 auto; }
     .banner-content .headline-container .subtitle {
       margin-bottom: 2em;
       margin-top: -1em;
+      margin: 0 auto;
       width: 80%; }
       .banner-content .headline-container .subtitle p {
         font-size: 1.1em; }
@@ -771,6 +793,12 @@ h1 {
     width: 14em; }
   .logo-container:nth-child(even) {
     width: 9em; }
+  .logo-container.small {
+    padding: 1em;
+    width: 20%; }
+    .logo-container.small .glow {
+      -webkit-box-shadow: 0 0 50px #ffffff;
+              box-shadow: 0 0 50px #ffffff; }
   .logo-container img {
     max-height: 100%;
     max-width: 100%; }
@@ -1119,7 +1147,7 @@ h1 {
         border: none; }
 
 .ribbon.demo {
-  padding-bottom: 1em; }
+  padding: 1em; }
   .ribbon.demo h2 {
     padding-bottom: 0.5em; }
 
